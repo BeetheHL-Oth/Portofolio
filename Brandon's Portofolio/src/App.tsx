@@ -26,7 +26,7 @@ const projectCards: PaneCard[] = [
     imageUrl: pendengarMuImage,
     status: 'online',
     githubUrl: 'https://github.com/Final-Project-H8-FSJS-RMT-069-P3/pendengarMu',
-    demoUrl: 'pendengarmu.vercel.app',
+    demoUrl: 'https://pendengarmu.vercel.app',
   },
   {
     title: 'Reverie Stories',
@@ -36,7 +36,7 @@ const projectCards: PaneCard[] = [
     imageUrl: reverieStoriesImage,
     status: 'offline',
     githubUrl: 'https://github.com/BeetheHL-Oth/ReverieStories-client',
-    demoUrl: 'reveriestories-client.vercel.app',
+    demoUrl: 'https://reveriestories-client.vercel.app',
   },
   {
     title: 'EasyPayCalc',
@@ -46,7 +46,7 @@ const projectCards: PaneCard[] = [
     imageUrl: easyPayCalcImage,
     status: 'online',
     githubUrl: 'https://github.com/watisdis31/Split-bill-calculator',
-    demoUrl: 'easypaycalc.vercel.app',
+    demoUrl: 'https://easypaycalc.vercel.app',
   },
 ]
 
