@@ -20,7 +20,7 @@ function ShowcasePane({ id, title, cards, sectionLabel, sectionHint }: ShowcaseP
           <span className="text-white/75">{sectionHint}</span>
         </div>
 
-        <div className="flex flex-col gap-2.5 lg:flex-1 lg:flex-row lg:gap-4">
+        <div className="flex min-h-0 flex-1 flex-col gap-2.5 lg:flex-row lg:gap-4">
           <div className="hidden rounded-3xl border border-white/22 bg-[#ecdba2]/70 p-4 shadow-2xl backdrop-blur-xl lg:flex lg:w-88 lg:shrink-0 lg:flex-col lg:justify-between sm:rounded-4xl sm:p-8">
             <h2 className="text-base font-bold tracking-tight text-black sm:text-2xl lg:text-4xl">{title}</h2>
             <div>
@@ -28,7 +28,7 @@ function ShowcasePane({ id, title, cards, sectionLabel, sectionHint }: ShowcaseP
             </div>
           </div>
 
-          <div className="grid gap-2.5 auto-rows-min lg:flex-1 lg:grid-cols-3 lg:gap-4">
+          <div className="grid min-h-0 flex-1 gap-2.5 lg:grid-cols-3 lg:gap-4">
             {featured && (
               <article className="rounded-[1.75rem] border border-white/16 bg-[#2e2e2e] p-3 shadow-[0_12px_28px_rgba(0,0,0,0.32),inset_0_1px_0_rgba(255,255,255,0.08)] sm:p-6 lg:col-span-2">
                 <h3 className="mt-1 text-[0.9rem] font-semibold text-white sm:mt-4 sm:text-3xl">{featured.title}</h3>
