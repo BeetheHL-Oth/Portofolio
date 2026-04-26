@@ -2,6 +2,48 @@
 	--layer-top-padding: 5.9rem;
 }
 
+.header-mobile-trigger,
+.header-mobile-menu {
+	display: none;
+}
+
+.header-mobile-menu {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: calc(100% + 0.45rem);
+	padding: 0 0.15rem;
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transform: translateY(-8px) scale(0.98);
+	transform-origin: top center;
+	pointer-events: none;
+	transition: max-height 240ms ease, opacity 220ms ease, transform 220ms ease;
+}
+
+.header-mobile-menu-shell {
+	width: 100%;
+	display: grid;
+	gap: 0.45rem;
+	padding: 0.55rem;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 1rem;
+	background: rgba(39, 24, 37, 0.88);
+	box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+	backdrop-filter: blur(20px) saturate(140%);
+	-webkit-backdrop-filter: blur(20px) saturate(140%);
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.header-mobile-menu.is-open {
+	max-height: 18rem;
+	opacity: 1;
+	transform: translateY(0) scale(1);
+	pointer-events: auto;
+}
+
 @media screen and (orientation: landscape) and (max-height: 430px) {
 	:root {
 		--layer-top-padding: 3.6rem;
@@ -226,6 +268,14 @@
 }
 
 @media screen and (orientation: portrait) and (max-width: 899px) {
+	.header-mobile-trigger {
+		display: inline-flex;
+	}
+
+	.header-mobile-menu {
+		display: block;
+	}
+
 	#projects .project-scroll {
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
