@@ -1,1 +1,277 @@
-/* App-specific styles are handled with Tailwind utilities in App.tsx. */
+:root {
+	--layer-top-padding: 5.9rem;
+}
+
+@media screen and (orientation: landscape) and (max-height: 430px) {
+	:root {
+		--layer-top-padding: 3.6rem;
+	}
+
+	#root {
+		font-size: 14px;
+	}
+
+	#hero {
+		min-height: calc(100svh - 4rem);
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+
+	#hero > div {
+		gap: 0.35rem;
+		max-width: 30rem;
+	}
+
+	#hero h1 {
+		font-size: 1.35rem;
+		line-height: 1.1;
+	}
+
+	#hero h2,
+	#hero p,
+	#hero button {
+		font-size: 0.72rem;
+	}
+
+	#hero > div > div:nth-of-type(1) {
+		height: 4.5rem;
+		width: 4.5rem;
+	}
+
+	#hero > div > div:nth-of-type(3) {
+		padding: 0.75rem;
+	}
+
+	#hero > div > div:nth-of-type(3) p {
+		font-size: 0.68rem;
+		line-height: 1.25rem;
+	}
+
+	#about,
+	#projects,
+	#contact {
+		height: calc(100svh - 4rem);
+	}
+
+	#about > div,
+	#projects > div,
+	#contact > div {
+			gap: 0.3rem;
+			padding: 0.45rem 0.3rem 0.3rem;
+	}
+
+		#contact .contact-panel {
+			padding: 0.5rem;
+		}
+
+		#contact .contact-grid {
+			margin-top: 0.35rem;
+			gap: 0.3rem;
+		}
+
+	#about h2,
+	#projects h2,
+	#contact h2 {
+		font-size: 1rem;
+	}
+
+		#about .grid {
+			gap: 0.3rem;
+		}
+
+		#about .grid > article {
+			padding: 0.55rem;
+		}
+
+		#about .grid > article:nth-child(2) {
+			padding: 0.55rem;
+		}
+
+		#about .grid > article:nth-child(2) div {
+			gap: 0.25rem;
+		}
+
+	#about h3,
+	#projects h3,
+	#contact h3,
+	#about h4,
+	#projects h4 {
+		font-size: 0.82rem;
+	}
+
+	#about p,
+	#projects p,
+	#contact p {
+		font-size: 0.66rem;
+		line-height: 1.1rem;
+	}
+
+	#about span,
+	#projects span,
+	#contact span {
+		font-size: 0.55rem;
+		letter-spacing: 0.12em;
+	}
+
+	#projects article,
+	#about article,
+	#contact article {
+		padding: 0.55rem;
+	}
+
+	#projects .snap-x > article {
+		min-width: min(92vw, 26rem);
+		width: min(92vw, 26rem);
+	}
+
+	#projects .project-card {
+		width: min(92vw, 26rem);
+	}
+
+	#projects .project-card__media {
+		height: 8rem;
+	}
+
+	#projects .project-card__body {
+		padding: 0.75rem;
+	}
+
+	#projects .project-card__body h3 {
+		font-size: 0.82rem;
+	}
+
+	#projects .project-card__body p {
+		font-size: 0.62rem;
+		line-height: 1rem;
+	}
+
+	#projects .project-card__body a {
+		padding: 0.22rem 0.45rem;
+		font-size: 0.52rem;
+		letter-spacing: 0.08em;
+		line-height: 1;
+	}
+
+	@media screen and (orientation: landscape) and (max-height: 430px) {
+		#projects .snap-x > article,
+		#projects .project-card {
+			min-width: min(48vw, 28rem);
+			width: min(48vw, 28rem);
+		}
+
+		#projects .project-card__media {
+			height: 8rem;
+		}
+
+		#projects .project-card__body {
+			padding: 0.65rem;
+		}
+
+		#projects .project-card__body h3 {
+			font-size: 0.78rem;
+		}
+
+		#projects .project-card__body p,
+		#projects .project-card__body a {
+			font-size: 0.56rem;
+		}
+	}
+}
+
+@media screen and (min-width: 900px) {
+	#projects .project-scroll {
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: calc(50% - 0.75rem);
+		grid-auto-rows: 1fr;
+		gap: 1rem;
+		overflow-x: auto;
+		overflow-y: hidden;
+		scroll-snap-type: none;
+		align-content: start;
+		align-items: stretch;
+	}
+
+	#projects .snap-x > article,
+	#projects .project-card {
+		min-width: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	#projects .project-card__media {
+		height: 12rem;
+	}
+
+	#projects .project-card__body {
+		padding: 1.1rem;
+		min-height: 0;
+	}
+
+	#projects .project-card__body h3 {
+		font-size: 1rem;
+	}
+
+	#projects .project-card__body p {
+		font-size: 0.8rem;
+		line-height: 1.2rem;
+	}
+
+	#projects .project-card__tech {
+		padding-left: 1rem;
+		padding-right: 0.9rem;
+	}
+}
+
+@media screen and (orientation: portrait) and (max-width: 899px) {
+	#projects .project-scroll {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
+	#projects .snap-x > article,
+	#projects .project-card {
+		min-width: calc(100vw - 2.5rem);
+		width: calc(100vw - 2.5rem);
+	}
+
+	#projects .project-card__media {
+		height: 8.5rem;
+	}
+
+	#projects .project-card__tech {
+		gap: 0.5rem;
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+		padding-left: 0.95rem;
+		padding-right: 0.75rem;
+	}
+
+	#projects .project-card__tech span {
+		padding: 0.22rem 0.45rem;
+		font-size: 0.52rem;
+		letter-spacing: 0.08em;
+	}
+
+	#projects .project-card__body {
+		padding: 0.7rem;
+	}
+
+	#projects .project-card__body h3 {
+		font-size: 0.8rem;
+	}
+
+	#projects .project-card__body p {
+		font-size: 0.62rem;
+		line-height: 1rem;
+	}
+
+	#projects .project-card__body a {
+		padding: 0.22rem 0.45rem;
+		font-size: 0.52rem;
+		letter-spacing: 0.08em;
+		line-height: 1;
+	}
+}

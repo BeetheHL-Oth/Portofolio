@@ -9,65 +9,41 @@ import ShowcasePane from './components/AboutPane'
 import './App.css'
 
 const aboutCards: PaneCard[] = [
-  { title: 'Background', description: 'Lorem Ipsum Dolor blablabla', tag: 'Window 01' },
-  { title: 'Experiences', description: 'This layer lands over the previous one with a soft blur.', tag: 'Window 02' },
-  { title: 'IDK', description: 'Big pane first, smaller containers second.', tag: 'Window 03' },
+  { title: 'Information', description: 'I am a fullstack developer that loves to create solutions to real world problems. With my experiences in developing and designing various projects building web-based applications, I am confident in my ability to contribute to any team and any project. I love learning new skills and technologies and I am always looking for new opportunities and challenges to help me grow as a developer and as a person.', tag: 'Window 01' },
+  { title: 'Skills', description: 'Core technologies I have mastered.', tag: 'Window 02', skills: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL', 'REST APIs', 'Git'] },
+  { title: 'Experiences', description: 'Coming from a background having done various events for different organizations, I am able to work well under pressure and in a team environment.', tag: 'Window 03' },
 ]
 
 const projectCards: PaneCard[] = [
   {
     title: 'PendengarMu',
-    description: 'Mental health companion app with journaling and mood tracking.',
+    description: 'Mental health application for booking appointments with psychologists. With the help of AI, the forms filled by users are analyzed to provide insights and recommendations for better mental well-being. The app also features tools for psychologists to manage their appointments and clients effectively.',
     tag: 'Health',
-    imageUrl: 'https://images.unsplash.com/photo-1477332552946-cfb384aeaf1c?auto=format&fit=crop&w=900&q=80',
+    techStacks: ['React', 'TypeScript', 'Tailwind', 'Google Oauth','Next.js', 'MongoDB', 'Gemini AI', 'Redis', 'Vercel', 'NextAuth'],
+    imageUrl: 'src/assets/pendengarmu.webp',
     status: 'online',
-    githubUrl: 'https://github.com/BeetheHL-Oth',
-    demoUrl: 'https://example.com/pendengarmu',
+    githubUrl: 'https://github.com/Final-Project-H8-FSJS-RMT-069-P3/pendengarMu',
+    demoUrl: 'pendengarmu.vercel.app',
   },
   {
     title: 'Reverie Stories',
-    description: 'Writing app focused on distraction-free drafting and story organization.',
+    description: 'Writing app focused on immersion and creativity. It features an AI roleplaying chatbot that can help users brainstorm and develop their stories, as well as a way to dive into the world they are creating. The app also includes Text To Speech for the chatbots so that the users are able to listen to the conversations and immerse themselves even more into the world they are building.',
     tag: 'Writing',
-    imageUrl: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80',
+    techStacks: ['React', 'express', 'Vite', 'Groq', 'supabase', 'google oauth', 'vercel', 'redis', 'elevenlabs tts'],
+    imageUrl: 'src/assets/reveriestories.webp',
     status: 'offline',
-    githubUrl: 'https://github.com/BeetheHL-Oth',
-    demoUrl: 'https://example.com/reverie-stories',
+    githubUrl: 'https://github.com/BeetheHL-Oth/ReverieStories-client',
+    demoUrl: 'reveriestories-client.vercel.app',
   },
   {
     title: 'EasyPayCalc',
-    description: 'Bill-splitting tool with shared expense balancing and quick settlement math.',
+    description: 'Bill-splitting tool with a focus on simplicity and ease of use. It allows users to split bills with friends and family, calculate including discounts taxes and service charges, including before and after tax, and provides also a way to toggle multiple instances of 1 item with different quantities and prices.',
     tag: 'Calculation',
-    imageUrl: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80',
+    techStacks: ['HTML', 'JavaScript', 'CSS'],
+    imageUrl: 'src/assets/easypaycalc.webp',
     status: 'online',
-    githubUrl: 'https://github.com/BeetheHL-Oth',
-    demoUrl: 'https://example.com/easypaycalc',
-  },
-  {
-    title: 'TaskFlow Board',
-    description: 'Kanban-style project tracker with drag and drop and sprint summaries.',
-    tag: 'Productivity',
-    imageUrl: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=900&q=80',
-    status: 'offline',
-    githubUrl: 'https://github.com/BeetheHL-Oth',
-    demoUrl: 'https://example.com/taskflow-board',
-  },
-  {
-    title: 'MarketPulse',
-    description: 'Lightweight dashboard for tracking crypto and stock watchlists in one place.',
-    tag: 'Dashboard',
-    imageUrl: 'https://images.unsplash.com/photo-1642543348745-290bc9b7ce58?auto=format&fit=crop&w=900&q=80',
-    status: 'online',
-    githubUrl: 'https://github.com/BeetheHL-Oth',
-    demoUrl: 'https://example.com/marketpulse',
-  },
-  {
-    title: 'StudySprint',
-    description: 'Pomodoro-based planner for focused study sessions and progress streaks.',
-    tag: 'Education',
-    imageUrl: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=900&q=80',
-    status: 'offline',
-    githubUrl: 'https://github.com/BeetheHL-Oth',
-    demoUrl: 'https://example.com/studysprint',
+    githubUrl: 'https://github.com/watisdis31/Split-bill-calculator',
+    demoUrl: 'easypaycalc.vercel.app',
   },
 ]
 
@@ -147,9 +123,9 @@ function App() {
         style={{ background: '#271825' }}
       >
 
-        <ParallaxLayer sticky={{ start: 0, end: 3.9 }} style={{ zIndex: 10, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '6.5rem 1rem 0', willChange: 'transform' }}>
+        <ParallaxLayer sticky={{ start: 0, end: 3.9 }} style={{ zIndex: 10, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 'var(--layer-top-padding, 5.5rem) 0 0', willChange: 'transform' }}>
           <animated.div
-            className="w-[min(100%-2rem,80rem)]"
+            className="w-[min(100%-1rem,80rem)] sm:w-[min(100%-2rem,80rem)]"
             style={{
               transform: to([heroSpring.y, heroSpring.scale], (y, scale) => `translate3d(0, ${y}px, 0) scale(${scale})`),
               opacity: heroSpring.opacity,
@@ -159,11 +135,11 @@ function App() {
           </animated.div>
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 0.86, end: 3.9 }} style={{ zIndex: 20, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '6.5rem 1rem 0', willChange: 'transform' }}>
-          <div className="w-[min(100%-2rem,80rem)]">
+        <ParallaxLayer sticky={{ start: 0.86, end: 3.9 }} style={{ zIndex: 20, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 'var(--layer-top-padding, 5.5rem) 0 0', willChange: 'transform' }}>
+          <div className="w-[min(100%-1rem,80rem)] sm:w-[min(100%-2rem,80rem)]">
             <ShowcasePane
               id="about"
-              title="My Skills and Background."
+              title="About Me"
               description="blablablabeblbelbelbeleblebalbelae"
               cards={aboutCards}
               sectionLabel="About"
@@ -172,8 +148,8 @@ function App() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 1.98, end: 3.9 }} style={{ zIndex: 30, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '6.5rem 1rem 0', willChange: 'transform' }}>
-          <div className="w-[min(100%-2rem,80rem)]">
+        <ParallaxLayer sticky={{ start: 1.98, end: 3.9 }} style={{ zIndex: 30, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 'var(--layer-top-padding, 5.5rem) 0 0', willChange: 'transform' }}>
+          <div className="w-[min(100%-1rem,80rem)] sm:w-[min(100%-2rem,80rem)]">
             <GlassPane
               id="projects"
               eyebrow="Projects"
@@ -185,8 +161,8 @@ function App() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 3.13, end: 3.9 }} style={{ zIndex: 40, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '6.5rem 1rem 1rem', willChange: 'transform' }}>
-          <div className="w-[min(100%-2rem,80rem)]">
+        <ParallaxLayer sticky={{ start: 3.13, end: 3.9 }} style={{ zIndex: 40, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 'var(--layer-top-padding, 5.5rem) 0 1rem', willChange: 'transform' }}>
+          <div className="w-[min(100%-1rem,80rem)] sm:w-[min(100%-2rem,80rem)]">
             <ContactPane
               id="contact"
               title="Contact Me"
