@@ -16,12 +16,12 @@ function ContactPane({ id, title, description, cards }: ContactPaneProps) {
           <span className="text-white/75">Let&apos;s Connect</span>
         </div>
 
-        <div className="min-h-0 flex-1 w-full overflow-y-auto rounded-3xl border border-white/14 bg-[#3f3f3f] p-4 shadow-[0_18px_36px_rgba(0,0,0,0.34)] sm:overflow-y-visible sm:p-8">
+        <div className="min-h-0 flex-1 w-full overflow-y-auto rounded-3xl border border-white/14 bg-[#2a2a2a] p-4 shadow-[0_18px_36px_rgba(0,0,0,0.34)] sm:overflow-y-visible sm:p-8">
           <p className="max-w-3xl text-sm leading-6 text-neutral-200 sm:text-base sm:leading-7">{description}</p>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {cards.map((card) => (
-              <article key={card.title} className="rounded-2xl border border-white/12 bg-[#474747] p-4 shadow-[0_8px_20px_rgba(0,0,0,0.28)] sm:p-5">
+              <article key={card.title} className="rounded-2xl border border-white/12 bg-[#252525] p-4 shadow-[0_8px_20px_rgba(0,0,0,0.28)] sm:p-5">
                 <span className="inline-flex rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/75">
                   {card.tag}
                 </span>

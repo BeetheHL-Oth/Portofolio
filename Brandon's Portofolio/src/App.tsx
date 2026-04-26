@@ -138,13 +138,13 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#44203f] text-white">
+    <div className="min-h-screen bg-[#271825] text-white">
       <AppHeader headerCenterOffset={headerCenterOffset} onJump={jumpToLayer} />
 
       <Parallax
         ref={parallaxRef}
         pages={4.2}
-        style={{ background: '#44203f' }}
+        style={{ background: '#271825' }}
       >
 
         <ParallaxLayer sticky={{ start: 0, end: 3.9 }} style={{ zIndex: 10, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '6.5rem 1rem 0', willChange: 'transform' }}>
@@ -155,7 +155,7 @@ function App() {
               opacity: heroSpring.opacity,
             }}
           >
-            <LandingHero />
+            <LandingHero onJump={jumpToLayer} />
           </animated.div>
         </ParallaxLayer>
 

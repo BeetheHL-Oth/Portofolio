@@ -12,10 +12,12 @@ function AppHeader({ headerCenterOffset, onJump }: AppHeaderProps) {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="h-2.5 w-2.5 rounded-full bg-white" />
-          <span className="text-sm font-semibold uppercase tracking-[0.35em] text-[#ecdba2]">Brandon Lawanto</span>
+          <span className="text-sm font-semibold uppercase tracking-[0.35em] text-[#ecdba2] cursor-pointer" onClick={() => onJump(0)}>
+            Brandon Lawanto
+          </span>
         </div>
         <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
-          <button type="button" onClick={() => onJump(0)} className="transition-colors hover:text-[#ecdba2]">Home</button>
+          <button type="button" onClick={() => onJump(0)} className="transition-colors hover:text-[#ecdba2]">Portofolio</button>
           <button type="button" onClick={() => onJump(0.88)} className="transition-colors hover:text-[#ecdba2]">About</button>
           <button type="button" onClick={() => onJump(2.0)} className="transition-colors hover:text-[#ecdba2]">Projects</button>
           <button type="button" onClick={() => onJump(3.15)} className="transition-colors hover:text-[#ecdba2]">Contact</button>

@@ -27,7 +27,7 @@ function ShowcasePane({ id, title, cards, sectionLabel, sectionHint }: ShowcaseP
 
           <div className="grid flex-1 gap-4 lg:grid-cols-3">
             {featured && (
-              <article className="rounded-[1.75rem] border border-white/16 bg-[#474747] p-4 shadow-[0_12px_28px_rgba(0,0,0,0.32),inset_0_1px_0_rgba(255,255,255,0.15)] sm:p-6 lg:col-span-2">
+              <article className="rounded-[1.75rem] border border-white/16 bg-[#2e2e2e] p-4 shadow-[0_12px_28px_rgba(0,0,0,0.32),inset_0_1px_0_rgba(255,255,255,0.08)] sm:p-6 lg:col-span-2">
                 <span className="inline-flex rounded-full border border-white/10 bg-white/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/75 backdrop-blur-2xl sm:px-3 sm:text-xs sm:tracking-[0.2em]">
                   {featured.tag}
                 </span>
@@ -38,7 +38,7 @@ function ShowcasePane({ id, title, cards, sectionLabel, sectionHint }: ShowcaseP
 
             <div className="grid gap-4">
               {rest.map((card) => (
-                <article key={card.title} className="rounded-3xl border border-white/16 bg-[#3f3f3f] p-4 shadow-[0_10px_24px_rgba(0,0,0,0.30),inset_0_1px_0_rgba(255,255,255,0.12)] sm:p-5">
+                <article key={card.title} className="rounded-3xl border border-white/16 bg-[#252525] p-4 shadow-[0_10px_24px_rgba(0,0,0,0.30),inset_0_1px_0_rgba(255,255,255,0.06)] sm:p-5">
                   <span className="inline-flex rounded-full border border-white/10 bg-white/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/75 sm:px-3 sm:text-xs sm:tracking-[0.2em]">
                     {card.tag}
                   </span>

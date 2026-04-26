@@ -1,4 +1,8 @@
-function LandingHero() {
+type LandingHeroProps = {
+  onJump: (offset: number) => void
+}
+
+function LandingHero({ onJump }: LandingHeroProps) {
   return (
     <section id="hero" className="flex h-[calc(100vh-12rem)] w-full items-center justify-center">
       <div className="flex w-full max-w-2xl flex-col items-center gap-5">
@@ -15,12 +19,13 @@ function LandingHero() {
         </h1>
 
         <div className="flex flex-col gap-3 sm:flex-row">
-          <a
-            href="https://drive.google.com/file/d/1lcpmA1lROofTlcgZxI58ssfkgSCU3qBV/view?usp=sharing"
+          <button
+            type="button"
+            onClick={() => onJump(3.15)}
             className="inline-flex items-center justify-center rounded-full bg-[#ecdba2] px-6 py-3 font-semibold text-neutral-950 transition-colors duration-200 hover:bg-[#ecdba2]/80 backdrop-blur-xl"
           >
-            View Resume
-          </a>
+            Contact Me
+          </button>
         </div>
         <div className="w-full rounded-3xl border border-white/12 bg-white/[0.07] p-5 text-center backdrop-blur-2xl backdrop-saturate-150 sm:p-6">
           <p className="text-base leading-7 text-neutral-200 sm:text-lg">

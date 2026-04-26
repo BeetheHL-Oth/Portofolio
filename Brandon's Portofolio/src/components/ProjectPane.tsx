@@ -33,8 +33,8 @@ function GlassPane({ id, eyebrow, title, cards, sectionHint }: PaneProps) {
         <div className="relative flex-1 overflow-hidden">
           <div className="flex h-full snap-x snap-mandatory gap-3 overflow-x-auto overflow-y-hidden pb-3 pr-2 sm:gap-4 sm:pl-6 sm:pr-6">
             {cards.map((card) => (
-              <article key={card.title} className="h-full min-w-[18rem] snap-start rounded-2xl border border-white/16 bg-[#474747] p-4 shadow-[0_12px_28px_rgba(0,0,0,0.32),inset_0_1px_0_rgba(255,255,255,0.15)] sm:min-w-[22rem] sm:p-5 lg:min-w-[26rem]">
-                <div className="h-28 w-full overflow-hidden rounded-xl border border-white/10 bg-[#3d3d3d] sm:h-32 lg:h-36">
+              <article key={card.title} className="h-full min-w-[18rem] snap-start rounded-2xl border border-white/16 bg-[#2e2e2e] p-4 shadow-[0_12px_28px_rgba(0,0,0,0.32),inset_0_1px_0_rgba(255,255,255,0.08)] sm:min-w-[22rem] sm:p-5 lg:min-w-[26rem]">
+                <div className="h-28 w-full overflow-hidden rounded-xl border border-white/10 bg-[#252525] sm:h-32 lg:h-36">
                   {card.imageUrl ? (
                     <img src={card.imageUrl} alt={`${card.title} preview`} className="h-full w-full object-cover" />
                   ) : (
