@@ -1,3 +1,5 @@
+import heroImage from '../assets/hero.webp'
+
 type LandingHeroProps = {
   onJump: (offset: number) => void
 }
@@ -11,7 +13,7 @@ function LandingHero({ onJump }: LandingHeroProps) {
         </p>
         <div className="h-40 w-40 overflow-hidden rounded-full border border-white/20 bg-white/8 backdrop-blur-xl backdrop-saturate-150 sm:h-56 sm:w-56">
           <div className="flex h-full w-full items-center justify-center text-xs uppercase tracking-[0.25em] text-white/60">
-            <img className="h-full w-full object-cover" src="../src/assets/hero.png" alt="Profile Image" />
+            <img className="h-full w-full object-cover" src={heroImage} alt="Profile Image" />
           </div>
         </div>
         <h1 className="text-center text-4xl font-semibold tracking-[0.06em] text-[#ecdba2] sm:text-5xl">
