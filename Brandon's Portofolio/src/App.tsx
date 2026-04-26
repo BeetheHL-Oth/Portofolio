@@ -6,6 +6,9 @@ import GlassPane, { type PaneCard } from './components/ProjectPane'
 import LandingHero from './components/LandingHero'
 import ContactPane from './components/ContactPane'
 import ShowcasePane from './components/AboutPane'
+import pendengarMuImage from './assets/PendengarMu.webp'
+import reverieStoriesImage from './assets/reveriestories.webp'
+import easyPayCalcImage from './assets/easypaycalc.webp'
 import './App.css'
 
 const aboutCards: PaneCard[] = [
@@ -20,7 +23,7 @@ const projectCards: PaneCard[] = [
     description: 'Mental health application for booking appointments with psychologists. With the help of AI, the forms filled by users are analyzed to provide insights and recommendations for better mental well-being. The app also features tools for psychologists to manage their appointments and clients effectively.',
     tag: 'Health',
     techStacks: ['React', 'TypeScript', 'Tailwind', 'Google Oauth','Next.js', 'MongoDB', 'Gemini AI', 'Redis', 'Vercel', 'NextAuth'],
-    imageUrl: 'src/assets/pendengarmu.webp',
+    imageUrl: pendengarMuImage,
     status: 'online',
     githubUrl: 'https://github.com/Final-Project-H8-FSJS-RMT-069-P3/pendengarMu',
     demoUrl: 'pendengarmu.vercel.app',
@@ -30,7 +33,7 @@ const projectCards: PaneCard[] = [
     description: 'Writing app focused on immersion and creativity. It features an AI roleplaying chatbot that can help users brainstorm and develop their stories, as well as a way to dive into the world they are creating. The app also includes Text To Speech for the chatbots so that the users are able to listen to the conversations and immerse themselves even more into the world they are building.',
     tag: 'Writing',
     techStacks: ['React', 'express', 'Vite', 'Groq', 'supabase', 'google oauth', 'vercel', 'redis', 'elevenlabs tts'],
-    imageUrl: 'src/assets/reveriestories.webp',
+    imageUrl: reverieStoriesImage,
     status: 'offline',
     githubUrl: 'https://github.com/BeetheHL-Oth/ReverieStories-client',
     demoUrl: 'reveriestories-client.vercel.app',
@@ -40,7 +43,7 @@ const projectCards: PaneCard[] = [
     description: 'Bill-splitting tool with a focus on simplicity and ease of use. It allows users to split bills with friends and family, calculate including discounts taxes and service charges, including before and after tax, and provides also a way to toggle multiple instances of 1 item with different quantities and prices.',
     tag: 'Calculation',
     techStacks: ['HTML', 'JavaScript', 'CSS'],
-    imageUrl: 'src/assets/easypaycalc.webp',
+    imageUrl: easyPayCalcImage,
     status: 'online',
     githubUrl: 'https://github.com/watisdis31/Split-bill-calculator',
     demoUrl: 'easypaycalc.vercel.app',
