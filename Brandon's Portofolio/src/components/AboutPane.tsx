@@ -31,9 +31,9 @@ function ShowcasePane({ id, title, cards, sectionLabel, sectionHint }: ShowcaseP
             </div>
           </div>
 
-          <div className="grid min-h-0 flex-1 gap-2.5 lg:grid-cols-3 lg:gap-4">
+          <div className="grid min-h-0 flex-1 gap-2.5 lg:grid-cols-1 lg:gap-4">
             {featured && (
-              <article className="rounded-[1.75rem] border border-white/16 bg-[#2e2e2e] p-3 shadow-[0_12px_28px_rgba(0,0,0,0.32),inset_0_1px_0_rgba(255,255,255,0.08)] sm:p-6 lg:col-span-2">
+              <article className="rounded-[1.75rem] border border-white/16 bg-[#2e2e2e] p-3 shadow-[0_12px_28px_rgba(0,0,0,0.32),inset_0_1px_0_rgba(255,255,255,0.08)] sm:p-6">
                 <h3 className="mt-1 text-[0.9rem] font-semibold text-white sm:mt-4 sm:text-3xl">{featured.title}</h3>
                 <p className="mt-1 max-w-2xl text-[0.66rem] leading-4 text-neutral-200 sm:mt-3 sm:text-base sm:leading-7">{featured.description}</p>
               </article>
