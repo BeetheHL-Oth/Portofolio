@@ -25,7 +25,7 @@ function LandingHero({ onJump }: LandingHeroProps) {
           <button
             type="button"
             onClick={() => onJump(3.15)}
-            className="inline-flex items-center justify-center rounded-full bg-[#ecdba2] px-4 py-2 text-sm font-semibold text-neutral-950 transition-colors duration-200 hover:bg-[#ecdba2]/80 backdrop-blur-xl sm:px-6 sm:py-3"
+            className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#ecdba2] px-6 py-3 text-base font-semibold text-neutral-950 transition-colors duration-200 hover:bg-[#ecdba2]/80 backdrop-blur-xl sm:px-6 sm:py-3 sm:text-sm"
           >
             Contact Me
           </button>
@@ -35,9 +35,22 @@ function LandingHero({ onJump }: LandingHeroProps) {
             Building applications with a focus on efficiency, scalability, and user experience. I am dedicated to crafting solutions that can help with problems in the real world, and I am always eager to learn new skills and grow as a developer.
           </p>
         </div>
-        <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-white/65 sm:text-xs sm:tracking-[0.22em]">
-          V -- Scroll down to see more -- v
-        </p>
+        <div className="flex items-center justify-center pt-1">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/8 text-white/80 shadow-[0_10px_24px_rgba(0,0,0,0.18)]">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              className="h-5 w-5 animate-bounce"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M6 10l6 6 6-6" />
+            </svg>
+          </span>
+        </div>
       </div>
     </section>
   )

@@ -51,12 +51,9 @@ const projectCards: PaneCard[] = [
 ]
 
 const contactCards: PaneCard[] = [
-  { title: 'Email', description: 'Banansbby@gmail.com', tag: 'Email' },
-  { title: 'Github', description: 'https://github.com/BeetheHL-Oth', tag: 'Github' },
-  { title: 'Linked In', description: 'For my professional network', tag: 'Job Portal' },
-  { title: 'Linked In', description: 'For my professional network', tag: 'Job Portal' },
-  { title: 'Linked In', description: 'For my professional network', tag: 'Job Portal' },
-  { title: 'Linked In', description: 'For my professional network', tag: 'Job Portal' },
+  { title: 'Email me', description: 'Banansbby@gmail.com', tag: 'Email', href: 'mailto:Banansbby@gmail.com', linkLabel: 'Send an email to Banansbby@gmail.com' },
+  { title: 'GitHub profile', description: 'https://github.com/BeetheHL-Oth', tag: 'Github', href: 'https://github.com/BeetheHL-Oth', linkLabel: 'Open GitHub profile in a new tab' },
+  { title: 'LinkedIn', description: 'For my professional network', tag: 'LinkedIn', href: 'https://www.linkedin.com/in/brandon-lawanto-62854a329/', linkLabel: 'Open LinkedIn in a new tab' },
 ]
 
 function App() {

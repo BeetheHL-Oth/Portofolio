@@ -2,6 +2,8 @@ type PaneCard = {
   title: string
   description: string
   tag: string
+  href?: string
+  linkLabel?: string
   skills?: string[]
   techStacks?: string[]
   imageUrl?: string
