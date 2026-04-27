@@ -7,7 +7,7 @@ type ContactPaneProps = {
   cards: PaneCard[]
 }
 
-function ContactPane({ id, title, description: _description, cards }: ContactPaneProps) {
+function ContactPane({ id, title, description, cards }: ContactPaneProps) {
   return (
     <section id={id} className="relative h-[calc(100svh-8rem)] w-full overflow-hidden rounded-xl border border-white/20 bg-white/11 shadow-[0_24px_80px_rgba(0,0,0,0.32)] backdrop-blur-2xl backdrop-saturate-150 sm:h-[calc(100vh-12rem)]">
       <div className="contact-shell relative flex h-full flex-col gap-3 p-3 sm:p-8 lg:p-10">
@@ -17,9 +17,12 @@ function ContactPane({ id, title, description: _description, cards }: ContactPan
         </div>
 
         <div className="contact-panel min-h-0 flex-1 w-full overflow-y-auto rounded-3xl border border-white/14 bg-[#2a2a2a] p-4 shadow-[0_18px_36px_rgba(0,0,0,0.34)] sm:overflow-y-visible sm:p-8">
-          {/* <p className="max-w-3xl text-[0.75rem] leading-5 text-neutral-200 sm:text-base sm:leading-7">{description}</p> */}
+          <div className="flex min-h-full flex-col items-center justify-start gap-4 py-1 sm:gap-5 sm:py-2 lg:pt-3">
+            <p className="max-w-3xl text-center text-[0.85rem] leading-6 text-neutral-200 sm:text-lg sm:leading-8">
+              {description}
+            </p>
 
-          <div className="contact-grid mt-5 grid gap-3 sm:mt-6 sm:grid-cols-3 sm:gap-4">
+            <div className="contact-grid mx-auto grid w-full max-w-6xl gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:justify-center lg:justify-items-stretch">
             {cards.map((card) => (
               card.href ? (
                 <a
@@ -50,6 +53,7 @@ function ContactPane({ id, title, description: _description, cards }: ContactPan
                 </article>
               )
             ))}
+            </div>
           </div>
         </div>
       </div>

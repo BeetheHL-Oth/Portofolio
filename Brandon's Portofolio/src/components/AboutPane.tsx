@@ -26,7 +26,7 @@ function ShowcasePane({ id, title, cards, sectionLabel, sectionHint }: ShowcaseP
             <h2 className="text-base font-bold tracking-tight text-black sm:text-2xl lg:text-4xl">{title}</h2>
             <div className="mt-6 flex min-h-52 flex-1 overflow-hidden rounded-4xl border border-black/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
               <div className="relative h-full w-full overflow-hidden rounded-3xl border-2 border-dashed border-black/20 bg-black/5">
-                <img src={aboutProfileImage} alt="About Image" className="block h-full w-full object-cover" />
+                <img src={aboutProfileImage} alt="About Image" className="block h-full w-full object-cover object-[75%_center]" />
               </div>
             </div>
           </div>
